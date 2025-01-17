@@ -25,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  bg-fixed`}
+        className={`${geistSans.variable} ${geistMono.variable}  min-h-screen `}
       >
-        <div className="bg-gray-900 min-h-screen">
+        <div className="bg-gray min-h-screen">
           <header className="border-b border-gray-800">
             <div className="flex justify-center items-center h-16 px-4">
               <h1 className="text-3xl font-bold bg-gradient-to-r from-gray-200 via-gray-400 to-gray-200 bg-clip-text text-transparent">
