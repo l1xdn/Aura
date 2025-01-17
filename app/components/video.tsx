@@ -1,11 +1,9 @@
 "use client";
 import { useState } from 'react';
-import PdfViewer from './pdf';
-// import PdfViewer from './pdf';
+
 
 interface WatchPageProps {
     id: string;
-    // pdfId: string; // Added a new property for the PDF ID
 }
 
 export default function WatchPage({ id }: WatchPageProps) {
