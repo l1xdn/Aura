@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import PdfViewer from "@/app/components/pdf";
 import WatchPage from "@/app/components/video";
 
@@ -9,7 +9,8 @@ interface WatchProps {
   };
 }
 
-const Watch = ({ params: { id }}: WatchProps) => {
+const Watch = async ({ params }: WatchProps) => {
+  const { id } = await params;
   return( 
   <>
   <WatchPage id={id} />
