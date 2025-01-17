@@ -1,9 +1,11 @@
 "use client";
 import { useState } from 'react';
+import PdfViewer from './pdf';
 // import PdfViewer from './pdf';
 
 interface WatchPageProps {
     id: string;
+    // pdfId: string; // Added a new property for the PDF ID
 }
 
 export default function WatchPage({ id }: WatchPageProps) {
@@ -29,10 +31,11 @@ export default function WatchPage({ id }: WatchPageProps) {
                     onLoad={handleLoad}
                     className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
                 />
-            </div>
+                </div>
+            {/* 
             <div className="flex justify-center items-center mt-8 pb-3">
                 <a 
-                    href="/ph1.pdf" 
+                    href={`/${pdfId}.pdf`} // Changed the href to use pdfId
                     download 
                     className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex items-center gap-2"
                 >
@@ -42,8 +45,8 @@ export default function WatchPage({ id }: WatchPageProps) {
                     Download PDF
                 </a>
             </div>
-            
-           
+          <h1>{pdfId}</h1>
+           <PdfViewer pdfUrl={`${pdfId}.pdf`}/> */}
         </>
     );
 }

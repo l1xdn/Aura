@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Thumbnail({ src, name ,id}: { src: string, name: string, id: string }) {
+export default function Thumbnail({ src, name ,id, pdfId}: { src: string, name: string, id: string,pdfId:string }) {
     return (
         <Link href={`/watch/${id}`}>
         <div className="flex gap-4 p-4">
