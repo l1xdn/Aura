@@ -4,9 +4,9 @@ import Link from 'next/link'
 export default function Thumbnail({ src, name ,id, }: { src: string, name: string, id: string }) {
     return (
         <Link href={`/watch/${id}`}>
-        <div className="flex gap-4 p-4">
+        <div className="flex gap-4 p-2 w-64 h-26 ">
             <div className="flex flex-col items-center">
-                <div className="relative w-64 h-26 rounded-lg overflow-hidden">
+                <div className="relative  rounded-lg overflow-hidden">
                     <Image 
                         src={src}
                         alt="Video thumbnail 1"

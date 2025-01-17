@@ -1,4 +1,4 @@
-// import Image from "next/image";
+
 import Thumbnail from "./components/thumbnail";
 
 export default function Home() {
@@ -89,6 +89,15 @@ export default function Home() {
 
 
       </div>
+      <h1 className="text-2xl font-bold text-gray-200 px-4 pt-4 "> محاضرة دوائر كهربائية  
+      </h1>
+      <div className="flex overflow-x-auto gap-2 p-4 w-64 h-26">
+        <Thumbnail src="https://png.pngtree.com/png-vector/20220622/ourmid/pngtree-atom-and-nucleus-molecule-research-png-image_5170401.png"
+          name="lecture No. 1"
+          id="QDSTUwnRsgI"
+        
+        
+        /></div>
 
     </>
   );
