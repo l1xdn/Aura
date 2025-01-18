@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import Thumbnail from "./components/thumbnail";
 
 export default function Home() {
@@ -98,6 +99,19 @@ export default function Home() {
         
         
         /></div>
+
+
+<div className="p-5">
+<Link href="/pdf">
+<button className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto">
+  Pdf's
+</button>
+</Link>
+</div>
+    
+
+
+
 
     </>
   );
