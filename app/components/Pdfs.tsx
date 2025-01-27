@@ -8,7 +8,10 @@ const Pdfs = () => {
     { id: 4, name: 'رياضيات 2', url: '/math-2.pdf' },
     { id: 5, name: 'انظمة رقمية 1', url: '/ds-1.pdf' },
     { id: 6, name: 'انظمة رقمية 2', url: '/ds-2.pdf' },
-    { id: 7, name: 'انظمة رقمية ', url: '/ns.pdf' }
+    { id: 7, name: 'انظمة رقمية ', url: '/ns.pdf' },
+    { id: 8, name: ' مهمات الرياضيات ', url: '/math-test.pdf' },
+    { id: 9, name: ' الجدول ', url: '/cr.pdf' }
+    
   ];
   // {pdfs.map((item, index) => (
   //   <div key={item.id || index}>{item.name}</div>
