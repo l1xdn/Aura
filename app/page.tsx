@@ -5,7 +5,7 @@ import Thumbnail from "./components/thumbnail";
 export default function Home() {
   return (
     <>
-      <h1 className="text-2xl font-bold text-gray-200 px-4 pt-4">محاضرات الفيزياء
+      <h1 className="text-2xl font-bold text-gray-200 px-4 pt-4">محاضرات الكهرباء
       </h1>
       <div className="flex overflow-x-auto gap-4 p-4">
         <Thumbnail
@@ -90,7 +90,51 @@ export default function Home() {
 
 
       </div>
-      <h1 className="text-2xl font-bold text-gray-200 px-4 pt-4 "> محاضرة دوائر كهربائية  
+     
+
+<h1 className="text-2xl font-bold text-gray-200 px-4 pt-4">محاضرات AutoCad</h1>
+      <div className="flex overflow-x-auto gap-4 p-4">
+        <Thumbnail
+          src="https://upload.wikimedia.org/wikipedia/en/f/f7/AutoCAD_2016_screenshot.png"
+
+          name="lecture No. 1"
+
+          id="gknHglBfQRU"
+        />
+
+        <Thumbnail
+          src="https://upload.wikimedia.org/wikipedia/en/f/f7/AutoCAD_2016_screenshot.png"
+
+          name="lecture No. 2"
+
+          id="XMWxjVSEQBE"
+        />
+
+        <Thumbnail
+          src="https://upload.wikimedia.org/wikipedia/en/f/f7/AutoCAD_2016_screenshot.png"
+
+          name="lecture No. 3"
+
+          id="fhKm-4RjQS0 "
+        />
+
+        <Thumbnail
+          src="https://upload.wikimedia.org/wikipedia/en/f/f7/AutoCAD_2016_screenshot.png"
+
+          name="lecture No. 4"
+
+          id="Bwjj8ZED2Fs"
+        />
+          <Thumbnail
+          src="https://upload.wikimedia.org/wikipedia/en/f/f7/AutoCAD_2016_screenshot.png"
+
+          name="lecture No. 5"
+
+          id="yjgFNj1327s"
+        />
+        
+</div>
+<h1 className="text-2xl font-bold text-gray-200 px-4 pt-4 "> محاضرة دوائر كهربائية  
       </h1>
       <div className="flex overflow-x-auto gap-2 p-4 w-64 h-26">
         <Thumbnail src="https://png.pngtree.com/png-vector/20220622/ourmid/pngtree-atom-and-nucleus-molecule-research-png-image_5170401.png"
@@ -99,8 +143,6 @@ export default function Home() {
         
         
         /></div>
-
-
 <div className="p-5">
 <Link href="/pdf">
 <button className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto">

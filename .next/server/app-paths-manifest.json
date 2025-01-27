@@ -1,6 +1,6 @@
 {
-  "/pdf/page": "app/pdf/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
-  "/watch/[id]/page": "app/watch/[id]/page.js"
+  "/pdf/page": "app/pdf/page.js",
+  "/watch/[id]/page": "app/watch/[id]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
