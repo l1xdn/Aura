@@ -1,29 +1,31 @@
+"use client";
+
 import React from 'react'
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
 
 const Pdfs = () => {
-  const pdfs = [
-    { id: 1, name: 'كهرباء 1', url: '/ph-1.pdf' },
-    { id: 2, name: 'كهرباء 2', url: '/ph-2.pdf' },
-    { id: 3, name: 'رياضيات 1', url: '/math-1.pdf' },
-    { id: 4, name: 'رياضيات 2', url: '/math-2.pdf' },
-    { id: 5, name: 'انظمة رقمية 1', url: '/ds-1.pdf' },
-    { id: 6, name: 'انظمة رقمية 2', url: '/ds-2.pdf' },
-    { id: 7, name: 'انظمة رقمية ', url: '/ns.pdf' },
-    { id: 8, name: ' مهمات الرياضيات ', url: '/math-test.pdf' },
-    { id: 9, name: ' الجدول ', url: '/cr.pdf' }
-    
-  ];
-  // {pdfs.map((item, index) => (
-  //   <div key={item.id || index}>{item.name}</div>
-  // ))}
+  const materials = useQuery(api.courses.getAllMaterials);
+
+  if (materials === undefined) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-200">Loading materials...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="">
-      <h1 className="flex justify-center">Download PDFs</h1>
+      <h1 className="flex justify-center text-white text-2xl font-bold mb-6">Download PDFs</h1>
      
-      {pdfs.map(pdf => (
-       <main className="p-3" key={pdf.id}>
-        <button key={pdf.id} className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto p-2">
-          <a href={pdf.url} download>{pdf.name}</a>
+      {materials.map(material => (
+       <main className="p-3" key={material._id}>
+        <button className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto p-2">
+          <a href={material.url} download>{material.nameArabic}</a>
         </button>
         </main>
       ))}

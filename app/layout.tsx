@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { ClerkProvider } from '@clerk/nextjs'
+import ConvexClientProvider from "./components/ConvexClientProvider";
+import Header from "./components/Header";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,21 +31,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable}  min-h-screen `}
       >
-        <div className="bg-gray min-h-screen">
-          <header className="border-b border-gray-800">
-            <div className="flex justify-center items-center h-16 px-4">
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-gray-200 via-gray-400 to-gray-200 bg-clip-text text-transparent">
-                Aura
-              </h1>
-            </div>
-          </header>
-          <Analytics/>
-          <SpeedInsights/>
+        <ClerkProvider 
+          signInUrl="/sign-in"
+          afterSignInUrl="/admin"
+          appearance={{
+            elements: {
+              // Hide sign up link in sign in form
+              signInStart: {
+                "& [data-localization-key='signIn.start.actionLink']": {
+                  display: "none"
+                }
+              }
+            }
+          }}
+        >
+          <ConvexClientProvider>
+            <div className="bg-gray min-h-screen">
+               <Header />
+              <Analytics/>
+              <SpeedInsights/>
 
-          <main>
-            {children}
-          </main>
-        </div>
+              <main>
+                {children}
+              </main>
+            </div>
+          </ConvexClientProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
