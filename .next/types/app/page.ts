@@ -1,4 +1,4 @@
-// File: /Users/macmasters/Desktop/aura/Aura/app/page.tsx
+// File: /Users/macmasters/Desktop/oldAura/Aura/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
